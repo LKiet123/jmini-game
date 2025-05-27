@@ -1,0 +1,184 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.math-blitz-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #bfdbfe, #c4b5fd); /* from-blue-100 to-purple-100 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* p-4 */
+}
+
+.math-blitz-card {
+  background-color: white;
+  border-radius: 1.5rem; /* rounded-2xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+  padding: 2rem; /* p-8 */
+  max-width: 28rem; /* max-w-md */
+  width: 100%;
+  transform: translateZ(0);
+  transition: all 0.3s ease;
+}
+
+.math-blitz-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 800; /* font-extrabold */
+  text-align: center;
+  margin-bottom: 1.5rem; /* mb-6 */
+  background: linear-gradient(to right, #2563eb, #7c3aed); /* from-blue-600 to-purple-600 */
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.math-blitz-score {
+  text-align: center;
+  margin-bottom: 1.5rem; /* mb-6 */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+}
+
+.math-blitz-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+}
+
+.math-blitz-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem; /* p-2 */
+  border-radius: 0.5rem; /* rounded-lg */
+  border-width: 2px;
+  border-color: #93c5fd; /* border-blue-300 */
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.math-blitz-select:focus {
+  border-color: #3b82f6; /* border-blue-500 */
+}
+
+.math-blitz-button {
+  width: 100%;
+  padding: 0.75rem 0;
+  background-color: #2563eb; /* bg-blue-600 */
+  color: white;
+  border-radius: 0.5rem; /* rounded-lg */
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.math-blitz-button:hover {
+  background-color: #1e40af; /* hover:bg-blue-700 */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+.math-blitz-game-over {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+}
+
+.math-blitz-game {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.math-blitz-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.math-blitz-stats p {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+}
+
+.math-blitz-question {
+  font-size: 1.5rem; /* text-2xl */
+  font-family: monospace;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  padding: 1rem; /* p-4 */
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.math-blitz-feedback {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+}
+
+.math-blitz-feedback.text-green-600 {
+  color: #16a34a;
+}
+
+.math-blitz-feedback.text-red-600 {
+  color: #dc2626;
+}
+
+.math-blitz-form {
+  display: flex;
+  gap: 0.5rem; /* gap-2 */
+}
+
+.math-blitz-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: #93c5fd;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.math-blitz-input:focus {
+  border-color: #3b82f6;
+}
+
+.text-red-600 {
+  color: #dc2626;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 0.3s ease-in-out;
+}
